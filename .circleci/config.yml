@@ -12,7 +12,7 @@ jobs:
       shell: cmd.exe
 
     environment:
-      PYTHON_ZSTANDARD_IMPORT_POLICY: cffi
+      PYTHON_ZSTANDARD_IMPORT_POLICY: default
       # CIBW_BEFORE_ALL: call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
       CIBW_BEFORE_BUILD: "pip install --user --upgrade pip requests zstandard cython"
       CIBW_BUILD: "cp37-win_amd64 cp38-win_amd64 cp39-win_amd64"
